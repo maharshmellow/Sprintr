@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <img src="logo.png" id="loginPageLogo" class="center-block img-responsive unselectable"></img>
+        </div>
+
+        <div class="center-block" id="whiteLoginBox">
+
+            <div id="loginText">
+                Login
+            </div>
+
+            <div>
+                <input id="emailField" placeholder="Email Address" class="center-block"></input>
+            </div>
+
+            <div>
+                <input id="passwordField" placeholder="Password" type="password" class="center-block"></input>
+            </div>
+
+            <div id="loginButtonDiv">
+                <button id="loginButton" class="center-block">Login</button>
+            </div>
+
+        </div>
+
+        <div id="noAccountMessage" class="center-block">
+            Don't have an account? <strong><a id="signuplink" href="signup.html">Sign up</a></strong>
+        </div>
+
+        <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+            <div class="mdl-snackbar__text"></div>
+            <button class="mdl-snackbar__action" type="button"></button>
+        </div>
+
+    </div>
+
+</body>
+
+
+<script>
+    (function() {
+        var snackbarContainer = document.querySelector('#demo-toast-example');
+        var showToastButton = document.querySelector('#loginButton'); // kept original variable names from google documentation for debugging initially
+        showToastButton.addEventListener('click', function() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    var responseText = xhttp.responseText;
+                    if (responseText == 1) {
+                        var data = {
+                            message: "INVALID LOGIN"
+                        };
+                        snackbarContainer.MaterialSnackbar.showSnackbar(data); // shows a red snackbar in the bottom with the error message
+                    }
+                    else {
+                        //redirect to the reading page - the response is the url to go to
+                        window.location.replace(responseText);
+                    }
+                }
+            };
+            if (document.getElementById("emailField").value == "" || document.getElementById("passwordField").value == "") {
+                // dont do anything
+            }
+            else {
+                xhttp.open("POST", "/cgi-bin/sprintr/loginUser.cgi", true);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                var requestString = "email=" + document.getElementById('emailField').value + "&password=" + document.getElementById("passwordField").value;
+                xhttp.send(requestString);
+            }
+
+        });
+    }());
+
+    // enter from password acts the same as loginbutton press
+    document.getElementById("passwordField")
+        .addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode == 13) {
+                document.getElementById("loginButton").click();
+            }
+        });
+</script>
+
+</html>

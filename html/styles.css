@@ -1,0 +1,101 @@
+@import url("fonts.css");
+
+body{
+  background-color: #000021;
+
+}
+#loginPageLogo{
+  width: 120px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#whiteLoginBox{
+  background: #FFFFFF;
+  border-radius: 4px;
+  min-height: 400px;
+  max-height: 400px;
+  max-width: 400px;
+
+}
+
+#loginText{
+  font-family: Proxima Nova;
+  font-size: 32px;
+  color: #000021;
+  /*line-height: 52px;*/
+
+  text-align: center;
+  letter-spacing: -2.2;
+  padding-top: 25px;
+  padding-bottom: 50px;
+
+}
+
+#emailField{
+  font-family: Proxima Nova;
+  font-size: 20px;
+  color: #000021;
+  line-height: 60px;
+  width: 80%;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  background: #F0F0F0;
+  border: 1px solid #B0B0B0;
+  border-radius: 4px;
+  letter-spacing: -1.2;
+
+
+}
+
+#passwordField{
+  font-family: Proxima Nova;
+  font-size: 20px;
+  color: #000021;
+  line-height: 60px;
+  width: 80%;
+  padding-left: 10px;
+  background: #F0F0F0;
+  border: 1px solid #B0B0B0;
+  border-radius: 4px;
+  letter-spacing: -1.2;
+  margin-bottom: 20px;
+}
+
+#loginButton{
+  background-image: radial-gradient(50% 100%, #F5003C 10%, #AF1566 100%);
+  border-radius: 4px;
+  border: 0;
+  font-family: Proxima Nova;
+  font-size: 21px;
+  color: #FFFFFF;
+  line-height: 23px;
+  letter-spacing: -2.2;
+  width: 80%;
+  height: 60px;
+}
+
+#noAccountMessage{
+  text-align: center;
+  color: white;
+  font-family: Proxima Nova;
+  padding-top: 10px;
+}
+#signuplink{
+  color: white;
+}
+#demo-toast-example{
+  background-color: #F5003C;
+  font-family: Proxima Nova;
+
+}
+
+.unselectable{
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Rectangle 5: */
