@@ -3,7 +3,7 @@
 
 Bugs:
  - When the intro message ends, it doesn't loop back
- 
+ - Autosave is not implemented yet so the book restarts after each login 
 ### Login Screen 
 <img width="1433" alt="screen shot 2017-04-10 at 11 07 49 pm" src="https://cloud.githubusercontent.com/assets/4590693/24893755/e7efa408-1e42-11e7-9428-ace0143b7717.png">
 
