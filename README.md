@@ -14,3 +14,7 @@ Bugs/Things to Change:
 
 ### Actual Reading Window
 <img width="1438" alt="screen shot 2017-04-10 at 11 08 47 pm" src="https://cloud.githubusercontent.com/assets/4590693/24893752/e66b4e3e-1e42-11e7-9b19-d2592489e8bc.png">
+
+### Demo
+
+![ezgif com-optimize](https://cloud.githubusercontent.com/assets/4590693/25066884/3356e8d8-21f0-11e7-87e3-77a9145349f8.gif)
