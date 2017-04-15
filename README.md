@@ -1,6 +1,9 @@
 # Sprintr Speed Reader 
 ##### https://www.maharsh.net/sprintr
 
+### Note (April 15, 2017)
+ - Google Chrome recently blocked the ability to inject scripts using document.write and the program required that functionality so it won't work until I redo that part using some templating engine.
+
 Bugs/Things to Change:
  - When the intro message ends, it doesn't loop back
  - Autosave is not implemented yet so the book restarts after each login 
