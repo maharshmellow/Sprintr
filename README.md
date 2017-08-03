@@ -1,5 +1,5 @@
 # Sprintr Speed Reader 
-##### https://www.maharsh.net/sprintr
+
 
 ### Note (April 15, 2017)
  - Google Chrome recently blocked the ability to inject scripts using document.write and the program required that functionality so it won't work until I redo that part using some templating engine.
